@@ -1,0 +1,87 @@
+actions:
+- action_check_city
+- action_search_restaurants
+- action_send_mail
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_mail
+- utter_ask_need_mail
+- utter_ask_price
+- utter_default
+- utter_goodbye
+- utter_greet
+- utter_location_not_found
+entities:
+- affirm
+- cuisine
+- deny
+- email
+- greet
+- location
+- people
+- price
+intents:
+- negation
+- restaurant_search
+- affirm
+- greet
+- goodbye
+- stop
+slots:
+  cuisine:
+    type: text
+  email:
+    type: text
+  location:
+    type: text
+  location_found:
+    type: text
+  price:
+    type: text
+  resto_count:
+    type: text
+templates:
+  utter_ask_cuisine:
+  - buttons:
+    - payload: American
+      title: American
+    - payload: Mexican
+      title: Mexican
+    - payload: Chinese
+      title: Chinese
+    - payload: Italian
+      title: Italian
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    text: what kind of cuisine would you like?
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  utter_ask_mail:
+  - text: Please provide your email id
+  utter_ask_need_mail:
+  - text: Should I send you details of all the restaurants on email?
+  utter_ask_price:
+  - buttons:
+    - payload: Lesser than 300
+      title: Lesser than 300
+    - payload: Rs 300 to 700
+      title: Rs 300 to 700
+    - payload: More than 700
+      title: More than 700
+    text: What price range are you looking at?
+  utter_default:
+  - text: i cannot understand
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there! How may i help you
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today
+  utter_location_not_found:
+  - text: We do not operate in that area yet
